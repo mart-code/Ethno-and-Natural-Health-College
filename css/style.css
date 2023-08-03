@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+html body {
+  overflow-x: hidden;
+}
+html li {
+  font-weight: 400;
+}
+html h1 {
+  font-size: 3em;
+}
+html h2 {
+  font-size: 2em;
+}
+html p {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #0a0a0a;
+}
+html a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+html .container {
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+html .current {
+  color: #00ff15 !important;
+}
+html .primary-btn {
+  background: linear-gradient(to right, #00ff15, #00ff15);
+  color: #fff;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+html .primary-btn:hover {
+  border: 1px #00ff15 solid;
+  background: transparent;
+  color: #00ff15;
+}
+html header .navbar {
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 10%;
+  background: #fff;
+  min-height: 70px;
+}
+html header .navbar .nav-branding img {
+  width: 10rem;
+}
+html header .navbar .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+html header .navbar .nav-menu li {
+  list-style: none;
+}
+html header .navbar .nav-menu .nav-link:hover {
+  color: #00ff15;
+  font-weight: bold;
+}
+html header .navbar .hamburger {
+  display: none;
+  cursor: pointer;
+}
+html header .navbar .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #0a0a0a;
+}
+@media (max-width: 768px) {
+  html {
+    /*Body*/
+    /*Heading*/
+    /*Contact Form*/
+  }
+  html body {
+    overflow-x: hidden;
+  }
+  html .hamburger {
+    display: block !important;
+  }
+  html .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  html .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  html .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  html .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    background-color: #fff;
+    z-index: 100;
+  }
+  html .nav-menu .nav-item {
+    margin: 16px 0;
+  }
+  html .nav-menu.active {
+    left: 0;
+  }
+  html #contact form {
+    width: 80% !important;
+  }
+}
+html #showcase {
+  background: url("../images/botanist-woman-looking-test-sample-microscope-observing-genetic-mutation-plants.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 80vh;
+}
+html #showcase .container {
+  text-align: center;
+  padding-top: 30vh;
+  padding-bottom: 10vh;
+  color: #fff;
+  text-shadow: #0a0a0a 2px 2px 10px;
+  z-index: 100;
+}
+html #showcase .container p {
+  color: #fff;
+}
+html #showcase .container button {
+  margin-top: 5vh;
+}
+
+section {
+  min-height: 50vh;
+  margin-bottom: 30vh;
+}
+section .title {
+  display: block;
+  width: 100%;
+  margin: 5vh 0;
+  position: relative;
+}
+section .title h2,
+section p {
+  text-align: center;
+}
+section .title h2::before {
+  position: absolute;
+  content: "";
+  width: 2em;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #00ff15);
+  margin: 3vh 0;
+  transform: translateX(-2em);
+}
+section .title h2::after {
+  position: absolute;
+  content: "";
+  width: 2em;
+  height: 2px;
+  background: linear-gradient(to right, #00ff15, transparent);
+  margin: 3vh 0;
+}
+
+#courses .container > h3 {
+  text-align: center;
+}
+
+#courses {
+  position: relative;
+}
+#courses button {
+  margin: 7vh auto;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+.course-list .card {
+  padding: 20px;
+  max-width: 250px;
+  margin: 1%;
+  border-top: #00ff15 3px solid;
+  background-color: #fffdfd;
+  border-radius: 5px;
+  line-height: 1.8;
+}
+.course-list .card li {
+  font-weight: 300;
+}
+.course-list .card .topic {
+  text-align: left;
+  margin-bottom: 5vh;
+}
+.course-list .card h3 {
+  text-align: left;
+  color: #00ff15;
+}
+.course-list .card:hover {
+  border-top-color: #00ff15;
+  transition: ease-in-out 500ms;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+footer {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 1px 1px 5px #eee;
+  background-color: #fff;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+footer .container img,
+footer .container div,
+footer .container ul {
+  max-width: 300px;
+  margin: 20px;
+}
+footer p {
+  margin-top: 0%;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #0a0a0a;
+}
+footer li {
+  list-style: none;
+}
+footer li a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+
+#about > .container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 10vh;
+}
+#about > .container .about-img,
+#about > .container .about-info {
+  min-height: 50vh;
+  max-width: 500px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+#about > .container .about-img {
+  width: 100%;
+  background: url("../images/close-up-medical-capsules-with-herbs-table.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#about > .container .about-img:nth-child(2) {
+  width: 100%;
+  background: url("../images/africa-humanitarian-aid-doctor-taking-care-patient.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#about > .container .about-info p {
+  margin: 30px 0;
+  text-align: left;
+}
+
+#contact .container {
+  display: flex;
+  flex-direction: column;
+}
+#contact .container .contact-row {
+  margin-top: 40px;
+  text-align: left !important;
+}
+#contact .container form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0 auto;
+}
+#contact .container form input,
+#contact .container form textarea {
+  margin: 5px 0;
+  outline: none;
+  padding: 5px;
+}
+
+#banner {
+  background: url("../images/scientist-looking-green-sapling-medical-experiment.jpg") no-repeat;
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  position: relative;
+}
+#banner .overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  z-index: 1;
+  opacity: 0.2;
+  background-color: #0a0a0a;
+}
+#banner .container {
+  text-align: center;
+  color: #fff !important;
+  padding: 20vh 0;
+  position: relative;
+  z-index: 10000000;
+}
+#banner .container p {
+  color: #fff;
+}
+
+.address address {
+  font-size: 0.8em;
+  margin: 5px 0;
+}
+
+#committee .container .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+#committee .container .profile img {
+  width: 200px;
+  height: 200px;
+}
+#committee .container .profile p {
+  max-width: 600px;
+  min-height: 200px;
+  text-align: left;
+  font-size: 14px;
+}
+#committee .container .profile h3 {
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center !important;
+}/*# sourceMappingURL=style.css.map */
